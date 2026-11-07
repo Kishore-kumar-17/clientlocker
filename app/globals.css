@@ -1,0 +1,99 @@
+:root {
+  --ground: #f6f4ef;
+  --ink: #1d2a2a;
+  --muted: #566464;
+  --line: #d9d5ca;
+  --accent: #0f5c56;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ground: #121a1a;
+    --ink: #eef1ee;
+    --muted: #a5b1ae;
+    --line: #2d3a39;
+    --accent: #6ccabf;
+    color-scheme: dark;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--ground);
+  color: var(--ink);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.55;
+}
+
+.page {
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 3rem;
+}
+
+.brand {
+  margin: 0;
+  color: var(--accent);
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.hero {
+  padding-block: clamp(3rem, 10vw, 6rem);
+}
+
+h1 {
+  max-width: 18em;
+  margin: 0;
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.lead {
+  max-width: 36em;
+  margin: 1.25rem 0 0;
+  color: var(--muted);
+  font-size: 1.125rem;
+}
+
+.promises {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.promises li {
+  padding-top: 1rem;
+  border-top: 2px solid var(--accent);
+}
+
+h2 {
+  margin: 0 0 0.375rem;
+  font-size: 1.0625rem;
+}
+
+.promises p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.status {
+  margin-top: 3rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.9375rem;
+}
+
+.status strong {
+  color: var(--ink);
+}
